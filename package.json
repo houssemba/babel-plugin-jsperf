@@ -1,0 +1,30 @@
+{
+  "name": "babel-plugin-jsperfo",
+  "version": "0.0.1",
+  "description": "This plugin aims to provide an easy way to benchmark javascript code",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/houssemba/babel-plugin-jsperfo.git"
+  },
+  "keywords": [
+    "jsperfo",
+    "jsperf",
+    "performance",
+    "benchmark",
+    "babel-plugin-jsperfo"
+  ],
+  "author": "Houssem BELHADJ AHMED <houssem@belhadjahmed.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/houssemba/babel-plugin-jsperfo/issues"
+  },
+  "homepage": "https://github.com/houssemba/babel-plugin-jsperfo#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "jest": "^21.2.1"
+  }
+}
