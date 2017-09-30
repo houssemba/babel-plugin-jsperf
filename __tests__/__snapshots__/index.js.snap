@@ -75,13 +75,17 @@ function foo() {
 
 exports[`function without return statement 1`] = `
 "
-function todo() {console.log('toto');}
+function todo() {
+  console.log('toto');
+}
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
 function todo() {
   console.time('todo');
-  console.log('toto');console.timeEnd('todo');
+
+  console.log('toto');
+  console.timeEnd('todo');
 }
 "
 `;
