@@ -1,17 +1,46 @@
-const babel = require('babel-core');
-const plugin = require('../src');
+/*eslint no-undef: "error"*/
+/*eslint-env node*/
+const pluginTester = require('babel-plugin-tester');
+const jsperfPlugin = require('../src/index');
 
-var example = `
-var foo = 1;
-if (foo) console.log(foo);
-function toto() {
-  console.log('toto');
-}
-
-toto();
-`;
-
-it('works', () => {
-  const {code} = babel.transform(example, {plugins: [plugin]});
-  expect(code).toMatchSnapshot();
+pluginTester({
+  plugin: jsperfPlugin,
+  snapshot: true,
+  tests: [{
+    title: 'function without return statement',
+    code: `
+      function todo() {
+        console.log('toto');
+      }
+    `
+  }, {
+    title: 'function with return statement',
+    code: `
+      function foo() {
+        const bar = 'bar';
+        return bar;
+      }
+    `
+  }, {
+    title: 'arrow function',
+    code: `
+      const foo = () => 'test';
+    `
+  }, {
+    title: 'anonymous function',
+    code: `
+      (function(){
+          console.log('anonymous function');
+      }())
+    `
+  }, {
+    title: 'clazz method',
+    code: `
+      class clazz {
+        method() {
+          console.log('class method !');
+        }
+      }
+    `
+  }]
 });

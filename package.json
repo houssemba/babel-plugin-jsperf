@@ -1,30 +1,34 @@
 {
-  "name": "babel-plugin-jsperfo",
+  "name": "babel-plugin-jsperf",
   "version": "0.0.1",
   "description": "This plugin aims to provide an easy way to benchmark javascript code",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --coverage --no-cache --ci --runInBand",
+    "test:update": "jest --updateSnapshot",
+    "test:watch": "jest --watch --no-cache"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/houssemba/babel-plugin-jsperfo.git"
+    "url": "git+https://github.com/houssemba/babel-plugin-jsperf.git"
   },
   "keywords": [
-    "jsperfo",
     "jsperf",
     "performance",
     "benchmark",
-    "babel-plugin-jsperfo"
+    "babel-plugin-jsperf"
   ],
   "author": "Houssem BELHADJ AHMED <houssem@belhadjahmed.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/houssemba/babel-plugin-jsperfo/issues"
+    "url": "https://github.com/houssemba/babel-plugin-jsperf/issues"
   },
-  "homepage": "https://github.com/houssemba/babel-plugin-jsperfo#readme",
+  "homepage": "https://github.com/houssemba/babel-plugin-jsperf#readme",
   "devDependencies": {
     "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.1",
+    "babel-plugin-tester": "^4.0.0",
+    "eslint": "^4.8.0",
     "jest": "^21.2.1"
   }
 }
