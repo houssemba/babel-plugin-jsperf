@@ -1,8 +1,8 @@
 {
   "name": "babel-plugin-jsperf",
   "version": "0.0.1",
-  "description": "This plugin aims to provide an easy way to benchmark javascript code",
-  "main": "index.js",
+  "description": "jsperf plugin aims to provide an easy way to benchmark javascript code",
+  "main": "src/index.js",
   "scripts": {
     "test": "jest --coverage --no-cache --ci --runInBand",
     "test:update": "jest --updateSnapshot",
