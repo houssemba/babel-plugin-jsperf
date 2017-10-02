@@ -1,4 +1,5 @@
 # babel-plugin-tester
+> an easy way to benchmark your javascript code
 
 [![Build Status](https://travis-ci.org/houssemba/babel-plugin-jsperf.svg?branch=master)](https://travis-ci.org/houssemba/babel-plugin-jsperf)
 [![codecov](https://codecov.io/gh/houssemba/babel-plugin-jsperf/branch/master/graph/badge.svg)](https://codecov.io/gh/houssemba/babel-plugin-jsperf)
@@ -11,6 +12,22 @@ npm install --save-dev babel-plugin-jsperf
 ```
 
 ## Usage
+
+### `.babelrc`
+
+**.babelrc**
+
+```json
+{
+  "plugins": ["jsperf"]
+}
+```
+
+### CLI
+
+```sh
+babel --plugins jsperf code.js -o out.js
+```
 
 ## Examples
 
