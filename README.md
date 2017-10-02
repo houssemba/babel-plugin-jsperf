@@ -12,16 +12,78 @@ npm install --save-dev babel-plugin-jsperf
 
 ## Usage
 
-## Example
+## Examples
 
 ```javascript
+// jsperf
+function todo() {
+  console.log('toto');
+}
+```
+
+↓ ↓ ↓ ↓ ↓ ↓
+
+```javascript
+// jsperf
+function todo() {
+  console.time('todo');
+  console.log('toto');
+  console.timeEnd('todo');
+}
+```
+---
+
+```javascript
+const foo = /* jsperf */ () => 'test';
+```
+
+↓ ↓ ↓ ↓ ↓ ↓
+
+```javascript
+const foo = /* jsperf */function () {
+  console.time('foo');
+  var _returnValue = 'test';
+  console.timeEnd('foo');
+  return _returnValue;
+};
+```
+---
+
+```javascript
+class clazz {
+  // jsperf
+  method() {
+    console.log('class method !');
+  }
+}
+```
+
+↓ ↓ ↓ ↓ ↓ ↓
+
+```javascript
+class clazz {
+  // jsperf
+  method() {
+    console.time('function2');
+    console.log('class method !');
+    console.timeEnd('function2');
+  }
+}
+```
+---
+
+```javascript
+// jsperf
 function foo() {
   const bar = 'bar';
   return bar;
 }
 ```
-      ↓ ↓ ↓ ↓ ↓ ↓
+
+↓ ↓ ↓ ↓ ↓ ↓
+
 ```javascript
+// jsperf
 function foo() {
   console.time('foo');
   const bar = 'bar';
