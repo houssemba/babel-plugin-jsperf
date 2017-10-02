@@ -38,5 +38,13 @@ pluginTester({
         }
       }
     `
+  }, {
+    title: 'function without comment',
+    code: `
+      function fun() {
+         console.log('Do not touch !');
+      }
+    `,
+    snapshot: false
   }]
 });

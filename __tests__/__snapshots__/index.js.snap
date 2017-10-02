@@ -29,10 +29,10 @@ class clazz {
 class clazz {
   // jsperf
   method() {
-    console.time('function2');
+    console.time('function');
 
     console.log('class method !');
-    console.timeEnd('function2');
+    console.timeEnd('function');
   }
 }
 "

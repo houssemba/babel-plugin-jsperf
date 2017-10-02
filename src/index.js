@@ -32,7 +32,7 @@ module.exports = function jsperf({ types: t }) {
       return variableParent.node.id.name
     }
 
-    return 'function2';
+    return 'function';
 }
 
   return {
