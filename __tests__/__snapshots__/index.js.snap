@@ -1,29 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`anonymous function 1`] = `
-"
-(function(){
-    console.log('anonymous function');
-}())
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-(function () {
-    console.time('function');
-
-    console.log('anonymous function');
-    console.timeEnd('function');
-})();
-"
-`;
-
 exports[`arrow function 1`] = `
 "
-const foo = () => 'test';
+const foo = /* jsperf */ () => 'test';
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
-const foo = function () {
+const foo = /* jsperf */function () {
   console.time('foo');
   var _returnValue = 'test';
   console.timeEnd('foo');
@@ -35,6 +18,7 @@ const foo = function () {
 exports[`clazz method 1`] = `
 "
 class clazz {
+  // jsperf
   method() {
     console.log('class method !');
   }
@@ -43,11 +27,12 @@ class clazz {
       ↓ ↓ ↓ ↓ ↓ ↓
 
 class clazz {
+  // jsperf
   method() {
-    console.time('function');
+    console.time('function2');
 
     console.log('class method !');
-    console.timeEnd('function');
+    console.timeEnd('function2');
   }
 }
 "
@@ -55,6 +40,7 @@ class clazz {
 
 exports[`function with return statement 1`] = `
 "
+// jsperf
 function foo() {
   const bar = 'bar';
   return bar;
@@ -62,6 +48,7 @@ function foo() {
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
+// jsperf
 function foo() {
   console.time('foo');
 
@@ -75,12 +62,14 @@ function foo() {
 
 exports[`function without return statement 1`] = `
 "
+// jsperf
 function todo() {
   console.log('toto');
 }
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
+// jsperf
 function todo() {
   console.time('todo');
 

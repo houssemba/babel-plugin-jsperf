@@ -9,6 +9,7 @@ pluginTester({
   tests: [{
     title: 'function without return statement',
     code: `
+      // jsperf
       function todo() {
         console.log('toto');
       }
@@ -16,6 +17,7 @@ pluginTester({
   }, {
     title: 'function with return statement',
     code: `
+      // jsperf
       function foo() {
         const bar = 'bar';
         return bar;
@@ -24,19 +26,13 @@ pluginTester({
   }, {
     title: 'arrow function',
     code: `
-      const foo = () => 'test';
-    `
-  }, {
-    title: 'anonymous function',
-    code: `
-      (function(){
-          console.log('anonymous function');
-      }())
+      const foo = /* jsperf */ () => 'test';
     `
   }, {
     title: 'clazz method',
     code: `
       class clazz {
+        // jsperf
         method() {
           console.log('class method !');
         }

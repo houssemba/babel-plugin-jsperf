@@ -1,6 +1,8 @@
 /*eslint no-undef: "error"*/
 /*eslint-env node*/
 module.exports = function jsperf({ types: t }) {
+  const PLUGIN_LABEL = 'jsperf';
+
   const timerCallee = t.memberExpression(
     t.identifier('console'),
     t.identifier('time'),
@@ -30,13 +32,17 @@ module.exports = function jsperf({ types: t }) {
       return variableParent.node.id.name
     }
 
-    return 'function';
+    return 'function2';
 }
 
   return {
     name: 'babel-plugin-jsperf',
     visitor: {
       Function(path) {
+        const comments = path.node && path.node.leadingComments || [];
+        if (!comments.some(c => c.value.includes(PLUGIN_LABEL))) {
+            return;
+        }
         if (path.isArrowFunctionExpression()) {
           path.arrowFunctionToShadowed()
         }
