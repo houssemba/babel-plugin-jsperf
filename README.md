@@ -1,4 +1,4 @@
-# babel-plugin-tester
+# babel-plugin-jsperf
 > an easy way to benchmark your javascript code
 
 [![Build Status](https://travis-ci.org/houssemba/babel-plugin-jsperf.svg?branch=master)](https://travis-ci.org/houssemba/babel-plugin-jsperf)
