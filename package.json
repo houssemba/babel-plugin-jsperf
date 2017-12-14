@@ -26,9 +26,9 @@
   "homepage": "https://github.com/houssemba/babel-plugin-jsperf#readme",
   "devDependencies": {
     "babel-core": "6.26.0",
-    "eslint": "4.13.0",
+    "eslint": "4.13.1",
     "babel-eslint": "8.0.3",
-    "eslint": "4.13.0",
+    "eslint": "4.13.1",
     "babel-plugin-tester": "5.0.0",
     "jest": "21.2.1"
   }
