@@ -30,6 +30,6 @@
     "babel-eslint": "8.0.3",
     "eslint": "4.13.1",
     "babel-plugin-tester": "5.0.0",
-    "jest": "21.2.1"
+    "jest": "22.0.0"
   }
 }
