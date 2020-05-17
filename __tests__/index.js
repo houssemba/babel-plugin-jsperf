@@ -39,6 +39,14 @@ pluginTester({
       }
     `
   }, {
+    title: 'async function',
+    code: `
+      // jsperf
+      async function asyncCall() {
+        console.log('async function')
+      }
+    `
+  }, {
     title: 'function without comment',
     code: `
       function fun() {

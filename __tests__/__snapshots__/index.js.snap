@@ -15,6 +15,25 @@ const foo = /* jsperf */function () {
 "
 `;
 
+exports[`async function 1`] = `
+"
+// jsperf
+async function asyncCall() {
+  console.log('async function')
+}
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+// jsperf
+async function asyncCall() {
+  console.time('asyncCall');
+
+  console.log('async function');
+  console.timeEnd('asyncCall');
+}
+"
+`;
+
 exports[`clazz method 1`] = `
 "
 class clazz {
