@@ -3,8 +3,7 @@
 
 [![Build Status](https://travis-ci.org/houssemba/babel-plugin-jsperf.svg?branch=master)](https://travis-ci.org/houssemba/babel-plugin-jsperf)
 [![codecov](https://codecov.io/gh/houssemba/babel-plugin-jsperf/branch/master/graph/badge.svg)](https://codecov.io/gh/houssemba/babel-plugin-jsperf)
-[![Greenkeeper badge](https://badges.greenkeeper.io/houssemba/babel-plugin-jsperf.svg)](https://greenkeeper.io/)
-
+[![Known Vulnerabilities](https://snyk.io/test/github/houssemba/babel-plugin-jsperf/badge.svg?targetFile=package.json)](https://snyk.io/test/github/houssemba/babel-plugin-jsperf?targetFile=package.json)  
 ## Installation
 
 ```
